@@ -1,0 +1,7 @@
+{
+  "id": "qr-code-example",
+  "title": "My QR Code",
+  "copy": "Scan the QR Code to continue.",
+  "status_message": "Generating code.",
+  "link": "https://example.com/"
+}

@@ -1,0 +1,21 @@
+<div class="nsw-qr-code js-qr-code" id="{{id}}" aria-labelledby="{{id}}-title">
+  <div class="nsw-qr-code__content">
+    <div class="nsw-qr-code__title">
+      <h2 id="{{id}}-title">{{#if title}}{{title}}{{else}}QR Code{{/if}}</h2>
+    </div>{{#if copy}}
+    <div class="nsw-card__copy">
+      <p>{{copy}}</p>
+    </div>{{/if}}
+    <div class="nsw-qr-code__image-wrapper">
+      <div class="nsw-qr-code__status">{{#if status_message}}{{status_message}}{{else}}Generating code.{{/if}}</div>
+    </div>
+    <div class="nsw-qr-code__url">
+      <a href="{{#if link}}{{link}}{{/if}}" target="_blank">
+        <span>{{#if link}}{{link}}{{/if}}</span>
+        <span class="material-icons nsw-material-icons" title="(opens in new window)">open_in_new</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

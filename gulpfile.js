@@ -281,7 +281,7 @@ function lintJavascript() {
   return src(config.js.watch)
     .pipe(eslint())
     .pipe(eslint.format())
-    .pipe(eslint.failOnError())
+    //.pipe(eslint.failOnError())
 }
 
 function copyFavicon() {

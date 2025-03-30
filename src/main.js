@@ -12,6 +12,7 @@ import Filters from './components/filters/filters'
 import GlobalAlert from './components/global-alert/global-alert'
 import Navigation from './components/main-nav/main-nav'
 import Popover from './components/popover/popover'
+import QrCode from './components/qr-code/qr-code'
 import Select from './components/select/select'
 import SiteSearch from './components/header/header'
 import Tabs from './components/tabs/tabs'
@@ -55,6 +56,7 @@ function initSite() {
   const navigation = document.getElementById('main-nav')
   const openSearchButton = document.querySelectorAll('button.js-open-search')
   const popover = document.querySelectorAll('.js-popover')
+  const qrCodes = document.querySelectorAll('.js-qr-code')
   const tabs = document.querySelectorAll('.js-tabs')
   const toggletip = document.querySelectorAll('.js-toggletip')
   const tooltip = document.querySelectorAll('.js-tooltip')
@@ -148,6 +150,12 @@ function initSite() {
     })
   }
 
+  if (qrCodes) {
+    qrCodes.forEach((element) => {
+      new QrCode(element).init()
+    })
+  }
+
   if (tabs) {
     tabs.forEach((element) => {
       new Tabs(element).init()
@@ -174,5 +182,5 @@ function initSite() {
 }
 
 export {
-  initSite, Accordion, BackTop, Carousel, CookieConsent, DatePicker, Dialog, ExternalLink, FileUpload, Filters, GlobalAlert, Navigation, Popover, Select, SiteSearch, Tabs, Toggletip, Tooltip, UtilityList,
+  initSite, Accordion, BackTop, Carousel, CookieConsent, DatePicker, Dialog, ExternalLink, FileUpload, Filters, GlobalAlert, Navigation, Popover, QrCode, Select, SiteSearch, Tabs, Toggletip, Tooltip, UtilityList,
 }
