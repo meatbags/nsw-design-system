@@ -7,14 +7,16 @@ class QrCode {
   }
 
   init() {
-    if (!this.element || !this.elementImageWrapper || !this.elementLink) return
+    if (!this.element || !this.elementImageWrapper || !this.elementLink) {
+      return
+    }
 
-    if (window.QRCode) {
-      this.renderQRCode()
-    } else {
+    if (!window.QRCode) {
       window.addEventListener('load', () => {
         this.renderQRCode()
       })
+    } else {
+      this.renderQRCode()
     }
   }
 
